@@ -1,43 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
+/*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 09:42:59 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/23 13:02:28 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/11/23 17:05:04 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ShrubberyCreationForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm() : Form("Nothing", 145, 137)
+PresidentialPardonForm::PresidentialPardonForm() : Form("Nothing", 145, 137)
 {
-    std::cout << "ShrubberyCreationForm Default constructor called" << std::endl;
+    std::cout << "PresidentialPardonForm Default constructor called" << std::endl;
     this->target = "";
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : Form("Nothing", 145, 137)
+PresidentialPardonForm::PresidentialPardonForm(std::string target) : Form("Nothing", 145, 137)
 {
-    std::cout << "ShrubberyCreationForm constructor called" << std::endl;
+    std::cout << "PresidentialPardonForm constructor called" << std::endl;
     this->target = target;
 }
 
-ShrubberyCreationForm::~ShrubberyCreationForm()
+PresidentialPardonForm::~PresidentialPardonForm()
 {
-    std::cout << "ShrubberyCreationForm destructor called" << "n";
+    std::cout << "PresidentialPardonForm destructor called" << "n";
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm( const ShrubberyCreationForm& f) : Form(f.getName(), f.getSignd(), f.getExecute())
+PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm& f) : Form(f.getName(), f.getSignd(), f.getExecute())
 {
-    std::cout << "ShrubberyCreationForm Copy constructor called" << std::endl;
+    std::cout << "PresidentialPardonForm Copy constructor called" << std::endl;
     this->target = f.target;
 }
 
-void ShrubberyCreationForm::operator=(const ShrubberyCreationForm &f)
+void PresidentialPardonForm::operator=(const PresidentialPardonForm &f)
 {
-    std::cout << "ShrubberyCreationForm assignment operateur called" << std::endl;
+    std::cout << "PresidentialPardonForm assignment operateur called" << std::endl;
     this->target = f.target;
     this->setIssigned(f.getIssigned());
 }
@@ -58,15 +58,13 @@ void drawtree(std::fstream &f)
     f << "       , -=-~  .-^- _" << std::endl;
 }
 
-void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
+void PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
     if (this->getIssigned())
     {
         if (executor.getGrade())
         {
-            std::fstream f;
-            f.open(this->target + "_shrubbery", std::ios::out | std::ios::trunc);
-            drawtree(f);
+            std::cout << "<" << this->target << ">" << " has been pardoned by Zafod Beeblebrox.\n";
         }
     }
 }

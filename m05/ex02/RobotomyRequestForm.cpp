@@ -6,7 +6,7 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 09:42:59 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/23 13:24:12 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/11/23 15:56:40 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,13 +44,25 @@ void RobotomyRequestForm::operator=(const RobotomyRequestForm &f)
 
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
+    srand(time(0));
+    
+    int random = rand() % 100 + 1;
     if (this->getIssigned())
     {
         if (executor.getGrade())
         {
-            std::fstream f;
-            f.open(this->target + "_shrubbery", std::ios::out | std::ios::trunc);
-            drawtree(f);
+            if (random > 50)
+            {
+                std::cout << "<" << this->target << "> has been robotomized successfully 50% ofthe time\n";
+            }
+            else
+            {
+                std::cout << "<" << this->target << "> it’s a failure\n";
+            }
         }
+        else
+            throw GradeTooLowException();
     }
+    else
+        throw GradeTooLowException();
 }

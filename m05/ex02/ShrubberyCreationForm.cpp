@@ -6,7 +6,7 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 09:42:59 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/23 13:02:28 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/11/23 14:12:26 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,9 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
             f.open(this->target + "_shrubbery", std::ios::out | std::ios::trunc);
             drawtree(f);
         }
+        else
+            throw GradeTooLowException();
     }
+    else
+        throw GradeTooLowException();
 }
