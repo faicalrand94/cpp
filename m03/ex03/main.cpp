@@ -6,24 +6,29 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 20:33:35 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/12 18:12:10 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/11/15 02:23:45 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 #include <iostream>
 
+int f();
+int f();
+
+int f()
+{
+    
+}
 int main( void ) 
 {
-    FragTrap a;
-    FragTrap b( a );
-    FragTrap d("killer");
-    FragTrap c;
-    c = b;
+    DiamondTrap a;
+    // DiamondTrap b( a );
+    // DiamondTrap d("killer");
+    // DiamondTrap c;
+    // c = b;
     a.attack("hhhh");
-    b.takeDamage(6);
-    c.beRepaired(8);
-    d.highFivesGuys();
-    
+    a.beRepaired(4);
+    a.whoAmI();
     return 0;
 }

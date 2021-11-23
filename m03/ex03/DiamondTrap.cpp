@@ -6,7 +6,7 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:49:51 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/14 19:36:18 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/11/14 21:04:19 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ DiamondTrap::DiamondTrap()
 DiamondTrap::DiamondTrap(std::string name)
 {
     this->Name = name;
-    ClapTrap::Name = name + " _clap_name";
+    ClapTrap::Name = name + "_clap_name";
 	this->Hitpoints = 100;
 	this->Energy_points = 100;
 	this->Attack_damage = 30;
