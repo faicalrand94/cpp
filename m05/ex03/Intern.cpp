@@ -6,7 +6,7 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 10:12:11 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/25 05:21:25 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/11/25 05:26:58 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ ShrubberyCreationForm *scf(std::string target)
 
 Form* Intern::makeForm(std::string nameForm, std::string target)
 {
-    
     std::string forms[3] = {"presidential pardon" , "robotomy request", "shrubbery creation"};
     Form* (*ptr[3])();
     ptr[0] = ppf;
@@ -61,5 +60,4 @@ Form* Intern::makeForm(std::string nameForm, std::string target)
         if (nameForm == forms[i])
             return (pt[i]);
     }
-    
 }
