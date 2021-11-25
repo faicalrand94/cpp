@@ -5,7 +5,7 @@ FLAGS = -Wall -Wextra -Werror
 CP = clang++ -std=c++98
 
 SRC = Bureaucrat.cpp main.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp \
-PresidentialPardonForm.cpp
+PresidentialPardonForm.cpp Intern.cpp
 
 all: $(NAME)
 

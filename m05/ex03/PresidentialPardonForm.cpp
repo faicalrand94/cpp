@@ -6,7 +6,7 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 09:42:59 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/24 04:21:25 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/11/25 12:17:03 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
     if (this->getIssigned())
     {
-        if (executor.getGrade())
+        if (executor.getGrade() <= this->getExecute())
         {
             std::cout << "<" << this->target << ">" << " has been pardoned by Zafod Beeblebrox.\n";
         }

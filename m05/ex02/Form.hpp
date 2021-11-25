@@ -6,7 +6,7 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 11:34:43 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/23 13:06:24 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/11/25 12:32:08 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,15 @@ class Form
         int getSignd() const;
         int getExecute() const;
         void beSigned(Bureaucrat &b);
-        virtual void execute(Bureaucrat const & executor) const = 0;
         class GradeTooHighException : public std::exception
         {
            const char *what() const throw();
         };
-        
         class GradeTooLowException : public std::exception
         {
            const char *what() const throw();
         };
+        virtual void execute(Bureaucrat const & executor) const = 0;
 };
 std::ostream &operator<<( std::ostream &output, Form &f);
 
