@@ -6,7 +6,7 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 02:51:37 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/23 13:08:21 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/11/26 07:41:02 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Form::Form(const std::string n, const int s, const int e) : name(n), signgrade(s
 
 Form::~Form()
 {
-    std::cout << "Form destructor called" << "\n";
+    std::cout << "Form destructor called"<< std::endl;
 }
 
 Form::Form(const Form &f) : name(f.name), signgrade(f.signgrade), executegrade(f.executegrade)

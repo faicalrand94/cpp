@@ -6,7 +6,7 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 09:42:59 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/25 12:17:36 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/11/26 07:41:47 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ PresidentialPardonForm::PresidentialPardonForm(std::string target) : Form("Nothi
 
 PresidentialPardonForm::~PresidentialPardonForm()
 {
-    std::cout << "PresidentialPardonForm destructor called" << "n";
+    std::cout << "PresidentialPardonForm destructor called"<< std::endl;
 }
 
 PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm& f) : Form(f.getName(), f.getSignd(), f.getExecute())

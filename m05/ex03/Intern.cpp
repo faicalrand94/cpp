@@ -6,7 +6,7 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 10:12:11 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/25 12:40:35 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/11/26 07:41:02 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Intern::Intern()
 
 Intern::~Intern()
 {
-    std::cout << "Intern destructor called" << "\n";
+    std::cout << "Intern destructor called"<< std::endl;
 }
 
 Intern::Intern(const Intern &f)

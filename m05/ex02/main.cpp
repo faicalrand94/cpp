@@ -8,17 +8,17 @@ int main()
     try
     {
         Bureaucrat b("hhh", 1);
-        ShrubberyCreationForm f("shrcf");
+        // ShrubberyCreationForm f("shrcf");
+        //f.beSigned(b);
+        //b.executeForm(f);
+
         // RobotomyRequestForm r("shrcf1");
-        // PresidentialPardonForm p("tahjhhh");
-        f.beSigned(b);
-        f.execute(b);
         // r.beSigned(b);
-        // r.execute(b);
-        b.executeForm(f);
         // b.executeForm(r);
-        // p.beSigned(b);
-        // p.execute(b);
+        
+        PresidentialPardonForm p("tahjhhh");
+        p.beSigned(b);
+        b.executeForm(p);
     }
     catch(std::exception &e)
     {

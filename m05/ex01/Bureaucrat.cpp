@@ -6,7 +6,7 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 01:45:21 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/23 08:33:08 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/11/26 07:41:02 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Bureaucrat::Bureaucrat(const std::string name, int grade) : name(name) , grade(g
 
 Bureaucrat::~Bureaucrat()
 {
-    std::cout << "Bureaucrat destructor called" << "\n";
+    std::cout << "Bureaucrat destructor called"<< std::endl;
 }
 Bureaucrat::Bureaucrat(const Bureaucrat &f)
 {

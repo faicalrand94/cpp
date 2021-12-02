@@ -6,7 +6,7 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 09:42:59 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/25 12:21:27 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/11/26 07:41:02 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : Form("Nothing
 
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
-    std::cout << "ShrubberyCreationForm destructor called" << "\n";
+    std::cout << "ShrubberyCreationForm destructor called"<< std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm( const ShrubberyCreationForm& f) : Form(f.getName(), f.getSignd(), f.getExecute())
