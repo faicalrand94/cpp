@@ -3,11 +3,11 @@
 
 int main() {
 
-    std::string str = "A";
-    int num;
+    char *str = "hello";
+    float* num;
 
     // using stoi() to store the value of str1 to x
-    num = std::stoi(str);
+    num = (float*)str; 
 
     std::cout << num;
 

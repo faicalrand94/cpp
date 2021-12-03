@@ -4,7 +4,7 @@ FLAGS = -Wall -Wextra -Werror
 
 CP = clang++ -std=c++98
 
-SRC = main.cpp A.cpp B.cpp Base.cpp
+SRC = main.cpp A.cpp B.cpp C.cpp Base.cpp
 
 all: $(NAME)
 

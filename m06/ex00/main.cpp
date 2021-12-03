@@ -1,6 +1,8 @@
 #include <iostream>
 #include <sstream>
 
+
+
 int spacialcase(std::string s)
 {
   if (s.compare("nan") == 0 || s.compare("nanf") == 0)
@@ -112,7 +114,8 @@ int main(int ac, char **av)
 
   /****** FLOAT ******/
 
-  std::cout << "float: " << atof(av[1]) << "f" << std::endl;
+  // std::cout << "float: " << atof(av[1]) << "f" << std::endl;
+  std::cout << "float: " << static_cast<float>(atof(av[1])) << "f" << std::endl;
 
   /***** END FLOAT *****/
 
@@ -126,7 +129,7 @@ int main(int ac, char **av)
 
   /****** DOUBLE ******/
 
-  std::cout << "double: " << dl << std::endl;
+  std::cout << "double: " << static_cast<double>(atof(av[1])) << std::endl;
 
   /***** END DOUBLE *****/
 
