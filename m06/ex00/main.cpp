@@ -50,7 +50,6 @@ int main(int ac, char **av)
 {
   char c;
   int it;
-  double dl;
   if (ac != 2)
   {
     std::cout << "Error: arguments\n";
@@ -113,23 +112,29 @@ int main(int ac, char **av)
   // ss >> fl;
 
   /****** FLOAT ******/
-
+  if (is_float_c(s))
+    s[s.length() - 1] = '\0';
   // std::cout << "float: " << atof(av[1]) << "f" << std::endl;
-  std::cout << "float: " << static_cast<float>(atof(av[1])) << "f" << std::endl;
+  std::cout << "float: " << static_cast<float>(atof(av[1]));
+  std::cout << 
+  ((static_cast<float>(atof(av[1])) - static_cast<int>(atof(av[1]))  == 0.0000000
+  && s.length() < 7) ? ".0f" : "f");
+  std::cout << std::endl;
 
   /***** END FLOAT *****/
 
 
 
-  if (is_float_c(s))
-    s[s.length() - 1] = '\0';
-  ss << s;
-  ss >> dl;
+
+  // ss << s;
+  // ss >> dl;
 
 
   /****** DOUBLE ******/
 
-  std::cout << "double: " << static_cast<double>(atof(av[1])) << std::endl;
+  std::cout << "DOUBLE: " << static_cast<double>(atof(av[1]));
+  std::cout << ((static_cast<double>(atof(av[1])) - static_cast<int>(atof(av[1]))  == 0.0000000 && s.length() < 7) ? ".0" : "");
+  std::cout << std::endl;
 
   /***** END DOUBLE *****/
 

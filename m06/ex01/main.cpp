@@ -22,7 +22,7 @@ int main()
   Data *d1;
   uintptr_t pt;
 
-  d->x = 6; 
+  d->x = 6;
   std::cout << d << std::endl;
   std::cout << d->x << std::endl;
   pt = serialize(d);
