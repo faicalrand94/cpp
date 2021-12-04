@@ -6,7 +6,7 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 09:36:28 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/25 12:09:33 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/11/29 11:02:50 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Intern
         Intern();
         ~Intern();
         Intern(const Intern &f);
-        void operator=(const Intern &f);
+        Intern &operator=(const Intern &f);
         class noform : public std::exception
         {
            const char *what() const throw();

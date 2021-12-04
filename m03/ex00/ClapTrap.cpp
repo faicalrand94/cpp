@@ -6,7 +6,7 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 15:32:59 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/11 18:55:25 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/12/04 19:53:03 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ ClapTrap::ClapTrap(std::string name) : Name(name), Hitpoints(10), Energy_points(
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "distructor called" << "\n";
+    std::cout << "destructor called" << "\n";
 }
 
 ClapTrap::ClapTrap(const ClapTrap &f)

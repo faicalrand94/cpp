@@ -12,13 +12,13 @@ int main()
         //f.beSigned(b);
         //b.executeForm(f);
 
-        // RobotomyRequestForm r("shrcf1");
-        // r.beSigned(b);
-        // b.executeForm(r);
+        RobotomyRequestForm r("shrcf1");
+        b.signForm(r);
+        b.executeForm(r);
         
-        PresidentialPardonForm p("tahjhhh");
-        p.beSigned(b);
-        b.executeForm(p);
+        // PresidentialPardonForm p("tahjhhh");
+       
+        // b.executeForm(p);
     }
     catch(std::exception &e)
     {

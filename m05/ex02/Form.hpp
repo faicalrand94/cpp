@@ -6,7 +6,7 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 11:34:43 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/25 12:32:08 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/11/29 10:05:43 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Form
         Form(const std::string name, const int signgrade, const int executegrade);
         virtual ~Form();
         Form(const Form &f);
-        void operator=(const Form &f);
+        Form &operator=(const Form &f);
         std::string getName() const;
         bool getIssigned() const;
         void setIssigned(bool);

@@ -6,7 +6,7 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 01:45:21 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/23 02:49:30 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/11/29 10:18:25 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class Bureaucrat
 {
-    protected:
+    private:
         const std::string name;
         int grade;
 
@@ -27,7 +27,7 @@ class Bureaucrat
         Bureaucrat(const std::string name, int grade);
         virtual ~Bureaucrat();
         Bureaucrat(const Bureaucrat &f);
-        void operator=(const Bureaucrat &f);
+        Bureaucrat &operator=(const Bureaucrat &f);
         class GradeTooHighException : public std::exception
         {
            const char *what() const throw();

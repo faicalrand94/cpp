@@ -6,7 +6,7 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 01:45:21 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/26 07:41:02 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/11/29 09:59:41 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ Bureaucrat::Bureaucrat(const Bureaucrat &f)
     std::cout << "Bureaucrat Copy constructor called" << std::endl;
     *this = f;
 }
-void Bureaucrat::operator=(const Bureaucrat &f)
+Bureaucrat &Bureaucrat::operator=(const Bureaucrat &f)
 {
     std::cout << "Bureaucrat assignment operateur called" << std::endl;
     this->grade = f.grade;
@@ -52,6 +52,7 @@ void Bureaucrat::operator=(const Bureaucrat &f)
     {
         throw Bureaucrat::GradeTooLowException();
     }
+    return(*this);
 }
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()
@@ -105,8 +106,9 @@ std::ostream &operator<<( std::ostream &output, const Bureaucrat &obj)
     return output;
 }
 
-void Bureaucrat::signForm(Form &f) const
+void Bureaucrat::signForm(Form &f)
 {
+    f.beSigned(*this);
     if (f.getIssigned() == true)
     {
         std::cout << "<" << this->name << "> signs <" << f.getName() << ">" << std::endl;

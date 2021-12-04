@@ -6,7 +6,7 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 11:34:43 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/23 11:03:31 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/11/29 10:05:43 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 #include <iostream>
 #include <exception>
-#include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form
 {
@@ -31,7 +32,7 @@ class Form
         Form(const std::string name, const int signgrade, const int executegrade);
         ~Form();
         Form(const Form &f);
-        void operator=(const Form &f);
+        Form &operator=(const Form &f);
         class GradeTooHighException : public std::exception
         {
            const char *what() const throw();

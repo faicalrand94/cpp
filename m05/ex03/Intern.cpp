@@ -6,7 +6,7 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 10:12:11 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/26 07:41:02 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/11/29 11:02:36 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,11 @@ Intern::Intern(const Intern &f)
     *this = f;
 }
 
-void Intern::operator=(const Intern &f)
+Intern &Intern::operator=(const Intern &f)
 {
     std::cout << "Intern assignment operateur called" << std::endl;
     (void)f;
+    return (*this);
 }
 
 const char* Intern::noform::what() const throw()

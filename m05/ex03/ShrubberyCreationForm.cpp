@@ -6,7 +6,7 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 09:42:59 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/26 07:41:02 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/11/29 11:01:03 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,12 @@ ShrubberyCreationForm::ShrubberyCreationForm( const ShrubberyCreationForm& f) : 
     this->setIssigned(f.getIssigned());
 }
 
-void ShrubberyCreationForm::operator=(const ShrubberyCreationForm &f)
+ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &f)
 {
     std::cout << "ShrubberyCreationForm assignment operateur called" << std::endl;
     this->target = f.target;
     this->setIssigned(f.getIssigned());
+    return (*this);
 }
 
 void drawtree(std::fstream &f)

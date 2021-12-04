@@ -6,7 +6,7 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 09:27:31 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/23 13:23:55 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/11/29 10:19:22 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class RobotomyRequestForm : public Form
         RobotomyRequestForm(std::string target);
         ~RobotomyRequestForm();
         RobotomyRequestForm(const RobotomyRequestForm &f);
-        void operator=(const RobotomyRequestForm &f);
+        RobotomyRequestForm &operator=(const RobotomyRequestForm &f);
         void execute(Bureaucrat const & executor) const;
 };
 

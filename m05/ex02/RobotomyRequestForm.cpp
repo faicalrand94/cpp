@@ -6,7 +6,7 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 09:42:59 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/26 07:41:47 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/12/01 21:38:17 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,12 @@ RobotomyRequestForm::RobotomyRequestForm( const RobotomyRequestForm& f) : Form(f
     this->setIssigned(f.getIssigned());
 }
 
-void RobotomyRequestForm::operator=(const RobotomyRequestForm &f)
+RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &f)
 {
     std::cout << "RobotomyRequestForm assignment operateur called" << std::endl;
     this->target = f.target;
     this->setIssigned(f.getIssigned());
+    return (*this);
 }
 
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const
@@ -54,7 +55,7 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
         {
             if (random > 50)
             {
-                std::cout << "<" << this->target << "> has been robotomized successfully 50% ofthe time\n";
+                std::cout << "<" << this->target << "> has been robotomized successfully 50% of the time\n";
             }
             else
             {

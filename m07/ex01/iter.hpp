@@ -4,7 +4,7 @@
 #include <iostream>
 
 template<typename iter>
-void update(iter *ar, int length, void (f)(iter &))
+void update(iter *ar, int length, void (f)(iter const &))
 {
     for (int i = 0; i < length; i++)
     {

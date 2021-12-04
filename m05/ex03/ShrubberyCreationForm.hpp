@@ -6,7 +6,7 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 09:27:31 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/23 17:09:06 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/11/29 10:21:29 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class ShrubberyCreationForm : public Form
         ShrubberyCreationForm(std::string target);
         ~ShrubberyCreationForm();
         ShrubberyCreationForm(const ShrubberyCreationForm &f);
-        void operator=(const ShrubberyCreationForm &f);
+        ShrubberyCreationForm &operator=(const ShrubberyCreationForm &f);
         void execute(Bureaucrat const & executor) const;
 };
 

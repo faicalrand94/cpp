@@ -6,7 +6,7 @@
 /*   By: fbouibao <fbouibao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 02:51:37 by fbouibao          #+#    #+#             */
-/*   Updated: 2021/11/26 07:41:02 by fbouibao         ###   ########.fr       */
+/*   Updated: 2021/11/29 10:11:52 by fbouibao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,11 @@ Form::Form(const Form &f) : name(f.name), signgrade(f.signgrade), executegrade(f
     this->_issigned = f._issigned;
 }
 
-void Form::operator=(const Form &f)
+Form &Form::operator=(const Form &f)
 {
     std::cout << "Form assignment operateur called" << std::endl;
     this->_issigned = f._issigned;
+    return (*this);
 }
 
 const char* Form::GradeTooHighException::what() const throw()
@@ -90,13 +91,8 @@ int Form::getExecute() const
 
 void Form::beSigned(Bureaucrat &b)
 {
-    if (b.getGrade() > this->signgrade)
-        b.signForm(*this);
-    else
-    {
+    if (b.getGrade() <= this->signgrade)
         this->_issigned = true;
-        b.signForm(*this);
-    }    
 }
 
 std::ostream &operator<<( std::ostream &output, Form &f)
