@@ -1,22 +1,33 @@
 #include "iter.hpp"
 
-void f(std::string &s)
+template<typename T>
+void f(T const &s)
 {
-    for (size_t i = 0; i < s.length(); i++)
-    {
-        s[i] = toupper(s[i]);
-    }
+    std::cout << s << std::endl;
 }
 
 int main()
 {
-    std::string s[4] = {"abc", "def", "hgi", "jkl"};
-
-    update(s, 4, f);
-
-    for (int i = 0; i < 4; i++)
+   std::cout << "test 1 string\n" << std::endl; 
     {
-        std::cout << s[i] << std::endl;
+        std::string s[4] = {"abc", "def", "hgi", "jkl"};
+
+        iter(s, 4, f);
     }
+    std::cout << "---------------\n" << std::endl; 
+      std::cout << "test 2 float\n" << std::endl; 
+    {
+        float a[5] = {2.5f, 2.3f, 77.0f, 666.666f, 6.66f};
+
+        iter(a, 5, f);
+    }
+    std::cout << "---------------\n" << std::endl; 
+      std::cout << "test 3 double\n" << std::endl; 
+    {
+        double a[5] = {2.55, 2.37, 77.0, 666.666666, 6.66666};
+
+        iter(a, 5, f);
+    }
+    std::cout << "---------------\n" << std::endl; 
     return (0);
 }

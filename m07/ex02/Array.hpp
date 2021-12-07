@@ -21,12 +21,13 @@ public:
         const char* what() const throw();
     };
     size_t  size() const;
+    T& operator[](int);
 };
 
 template<typename T>
 Array<T>::Array() 
 {
-    _size(0);
+    _size = 0;
     std::cout << "Default constructor called" << std::endl;
     ar = new T[0];
 }
@@ -34,7 +35,7 @@ Array<T>::Array()
 template<typename T>
 Array<T>::Array(unsigned int n)
 {
-    _size(n);
+    _size = n;
     std::cout << "constructor called" << std::endl;
     ar = new T[n];
 }
@@ -42,7 +43,7 @@ Array<T>::Array(unsigned int n)
 template<typename T>
 Array<T>::~Array()
 {
-    std::cout << "Copy constructor called" << std::endl;
+    std::cout << "destructor called" << std::endl;
     delete[] this->ar;
 }
 
@@ -76,6 +77,15 @@ template<typename T>
 size_t Array<T>::size() const
 {
     return (this->_size);
+}
+
+template<typename T>
+T& Array<T>::operator[](int i)
+{
+    
+    if (i >= static_cast<int>(this->_size) || i < 0)
+        throw Outofrange();
+    return (ar[i]);
 }
 
 #endif
