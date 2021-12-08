@@ -2,19 +2,17 @@
 
 span::span()
 {
-    std::cout << "Default constructor called" << std::endl;
+    this->N = 0;
 }
 
 
 span::span(unsigned int N)
 {
-    std::cout << "constructor called" << std::endl;
     this->N = N;
 }
 
 span::~span()
 {
-    std::cout << "destructor called" << "\n";
 }
 
 void span::addNumber(int nbr)
@@ -23,6 +21,13 @@ void span::addNumber(int nbr)
         this->v.push_back(nbr);
     else
         throw is_full();
+}
+
+void span::addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end)
+{
+    if ((this->v.size() + (end - begin)) >= N)
+        throw is_full();
+    this->v.insert(this->v.end(), begin, end);
 }
 
 const char* span::is_full::what() const throw()

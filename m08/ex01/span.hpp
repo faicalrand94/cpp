@@ -12,6 +12,7 @@ public:
     span(unsigned int N);
     ~span();
     void addNumber(int nbr);
+    void addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end);
     class is_full : public std::exception
     {
         const char* what() const throw();

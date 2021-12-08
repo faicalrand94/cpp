@@ -1,28 +1,33 @@
-#include "easyfind.hpp"
+#include "span.hpp"
 
-const char* NOT_FOUND::what() const throw()
-{
-	return "Error: Not Found";
-}
 
 int main ()
 {
-	std::vector<int> vec;// { 10, 20, 30, 40 };
-	std::string s;
-    vec.push_back(10);
-    vec.push_back(20);
-    vec.push_back(30);
-    vec.push_back(40);
-    vec.push_back(50);
-
-
 	try
 	{
-		easyfind(vec, 90);
+		span obj(6);
+
+
+		obj.addNumber(10);
+		obj.addNumber(20);
+		obj.addNumber(30);
+		obj.addNumber(40);
+		obj.addNumber(50);
+		
+
+		std::vector<int> vec2;
+		vec2.push_back(100);
+		vec2.push_back(200);
+		vec2.push_back(300);
+		vec2.push_back(400);
+		vec2.push_back(500);
+
+		obj.addNumber(vec2.begin(), vec2.end());
+
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cout << e.what() << std::endl;
 	}
 	
 	

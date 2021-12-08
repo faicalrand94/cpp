@@ -7,7 +7,7 @@ const char* NOT_FOUND::what() const throw()
 
 int main ()
 {
-	std::vector<int> vec;// { 10, 20, 30, 40 };
+	std::vector<int> vec;
 	std::string s;
     vec.push_back(10);
     vec.push_back(20);
