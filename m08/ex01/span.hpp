@@ -21,6 +21,6 @@ public:
     {
         const char* what() const throw();
     };
-    unsigned int shortestSpan(int);
-    unsigned int longestSpan(int);
+    unsigned int shortestSpan();
+    unsigned int longestSpan();
 };

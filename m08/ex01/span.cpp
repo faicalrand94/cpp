@@ -32,15 +32,15 @@ void span::addNumber(std::vector<int>::iterator begin, std::vector<int>::iterato
 
 const char* span::is_full::what() const throw()
 {
-    return "is full";
+    return "Error: is full";
 }
 
 const char* span::no_span::what() const throw()
 {
-    return "no_span";
+    return "Error: no_span";
 }
 
-unsigned int span::shortestSpan(int nbr)
+unsigned int span::shortestSpan()
 {
     std::vector<int>::iterator it;
     if (this->v.size() <= 1)
@@ -51,7 +51,7 @@ unsigned int span::shortestSpan(int nbr)
     return (*it);
 }
 
-unsigned int span::longestSpan(int nbr)
+unsigned int span::longestSpan()
 {
     std::vector<int>::iterator it;
     if (this->v.size() <= 1)

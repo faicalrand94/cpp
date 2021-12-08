@@ -5,7 +5,7 @@ int main ()
 {
 	try
 	{
-		span obj(6);
+		span obj(12);
 
 
 		obj.addNumber(10);
@@ -23,7 +23,10 @@ int main ()
 		vec2.push_back(500);
 
 		obj.addNumber(vec2.begin(), vec2.end());
-
+		if (obj.shortestSpan())
+			std::cout << "shortest span :" << obj.shortestSpan() << std::endl;
+		if (obj.longestSpan())
+			std::cout << "longest span :" << obj.longestSpan() << std::endl;
 	}
 	catch(const std::exception& e)
 	{
