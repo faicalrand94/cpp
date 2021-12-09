@@ -18,7 +18,7 @@ int main ()
 
 	try
 	{
-		easyfind(vec, 90);
+		easyfind(vec, 10);
 	}
 	catch(const std::exception& e)
 	{

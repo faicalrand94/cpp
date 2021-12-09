@@ -1,3 +1,7 @@
+#ifndef  SPAN_HPP
+#define SPAN_HPP
+
+
 #include <iostream>
 #include <vector>
 
@@ -11,6 +15,7 @@ public:
     span();
     span(unsigned int N);
     ~span();
+    
     void addNumber(int nbr);
     void addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end);
     class is_full : public std::exception
@@ -24,3 +29,5 @@ public:
     unsigned int shortestSpan();
     unsigned int longestSpan();
 };
+
+#endif

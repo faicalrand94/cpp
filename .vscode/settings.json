@@ -70,6 +70,7 @@
         "__functional_03": "cpp",
         "memory_resource": "cpp",
         "__cxx_version": "cpp",
-        "span": "cpp"
+        "span": "cpp",
+        "list": "cpp"
     }
 }

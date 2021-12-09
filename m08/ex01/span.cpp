@@ -25,7 +25,9 @@ void span::addNumber(int nbr)
 
 void span::addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end)
 {
-    if ((this->v.size() + (end - begin)) >= N)
+    size_t d = std::distance(begin, end);
+    std::cout <<  d << std::endl;
+    if ((this->v.size() + d) >= N)
         throw is_full();
     this->v.insert(this->v.end(), begin, end);
 }
@@ -42,22 +44,38 @@ const char* span::no_span::what() const throw()
 
 unsigned int span::shortestSpan()
 {
+    std::vector<int> vec = this->v;
     std::vector<int>::iterator it;
+
     if (this->v.size() <= 1)
     {
         throw no_span();
     }
-    it = std::min_element(this->v.begin(), this->v.end());
-    return (*it);
+    it = vec.begin();
+    std::sort(vec.begin(), vec.end());
+    int save;
+    save = *(it + 1) - *it;
+    for (size_t i = 0; i < vec.size(); i++)
+    {
+        if (save > (*(it + 1) - *it))
+            save = (*(it + 1) - *it);
+        it++;
+    }
+    return (save);
 }
 
 unsigned int span::longestSpan()
 {
+    std::vector<int> vec = this->v;
     std::vector<int>::iterator it;
+
     if (this->v.size() <= 1)
     {
         throw no_span();
     }
-    it = std::max_element(this->v.begin(), this->v.end());
-    return (*it);
+    it = vec.begin();
+    std::sort(vec.begin(), vec.end());
+    int save;
+    save = *(vec.end() - 1) - *it;
+    return (save);
 }
